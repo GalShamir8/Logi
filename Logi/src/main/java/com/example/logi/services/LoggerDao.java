@@ -11,19 +11,19 @@ import java.util.List;
 
 @Dao
 public interface LoggerDao {
-    @Query("SELECT * FROM logger")
+    @Query("SELECT * FROM logs")
     List<Logger> getAll();
 
-    @Query("SELECT * FROM logger WHERE id IN (:loggerIds)")
+    @Query("SELECT * FROM logs WHERE id IN (:loggerIds)")
     List<Logger> loadAllByIds(int[] loggerIds);
 
-    @Query("SELECT * FROM logger WHERE tag LIKE :tag LIMIT 1")
+    @Query("SELECT * FROM logs WHERE tag LIKE :tag LIMIT 1")
     Logger findByTag(String tag);
 
-    @Query("SELECT * FROM logger WHERE timestamp > :timestamp ")
+    @Query("SELECT * FROM logs WHERE timestamp > :timestamp ")
     List<Logger> findFromDate(long timestamp);
 
-    @Query("SELECT * FROM logger WHERE timestamp BETWEEN :startTimeStamp AND :endTimeStamp")
+    @Query("SELECT * FROM logs WHERE timestamp BETWEEN :startTimeStamp AND :endTimeStamp")
     List<Logger> findBetweenDate(long startTimeStamp, long endTimeStamp);
 
     @Insert
