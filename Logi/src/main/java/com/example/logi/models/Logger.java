@@ -3,7 +3,7 @@ package com.example.logi.models;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "logger")
+@Entity(tableName = "logs")
 public class Logger {
     @PrimaryKey(autoGenerate = true)
     private int id;
