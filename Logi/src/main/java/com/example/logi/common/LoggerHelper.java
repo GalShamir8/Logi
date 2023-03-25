@@ -10,8 +10,7 @@ import com.example.logi.services.LoggerDao;
 
 public class LoggerHelper {
 
-    private AppDB appDatabase;
-    private LoggerDao loggerDao;
+    private final LoggerDao loggerDao;
     private static LoggerHelper instance = null;
 
     public LoggerHelper getInstance(Context ctx){
@@ -21,8 +20,10 @@ public class LoggerHelper {
     }
 
     private LoggerHelper(Context ctx) {
-        this.appDatabase = Room.databaseBuilder(ctx, AppDB.class, "local-logger-db").build();
-        loggerDao = appDatabase.loggerDao();
+        loggerDao = Room
+                .databaseBuilder(ctx, AppDB.class, "local-logger-db")
+                .build()
+                .loggerDao();
     }
 
     public void getAll(Callable callable) {
