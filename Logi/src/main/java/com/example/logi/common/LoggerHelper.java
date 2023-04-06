@@ -13,7 +13,11 @@ public class LoggerHelper {
     private final LoggerDao loggerDao;
     private static LoggerHelper instance = null;
 
-    public static LoggerHelper getInstance(Context ctx){
+    public static LoggerHelper getInstance(){
+        return instance;
+    }
+
+    public static LoggerHelper init(Context ctx){
         if (instance == null)
             instance = new LoggerHelper(ctx);
         return instance;
