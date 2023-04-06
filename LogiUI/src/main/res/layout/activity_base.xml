@@ -40,6 +40,7 @@
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/base_LBL_getAllLogs"
                 android:text="@string/get_all_logs"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
@@ -47,6 +48,7 @@
                 android:layout_height="wrap_content"/>
 
             <TextView
+                android:id="@+id/base_LBL_deleteAllLogs"
                 android:text="@string/delete_all_logs"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
@@ -54,7 +56,7 @@
                 android:layout_height="wrap_content"/>
 
             <SearchView
-                android:id="@+id/search_view"
+                android:id="@+id/base_search_logs"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
