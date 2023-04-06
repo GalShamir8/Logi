@@ -13,7 +13,7 @@ import com.example.logi.common.LoggerHelper;
 public class LoggerProvider extends ContentProvider {
     @Override
     public boolean onCreate() {
-        LoggerHelper.getInstance(getContext());
+        LoggerHelper.init(getContext());
         return false;
     }
 
