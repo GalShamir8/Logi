@@ -10,7 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Logi" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/LogiUI" />
           </set>
         </option>
       </GradleProjectSettings>
