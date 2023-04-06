@@ -13,11 +13,10 @@ public class Logger {
 
     public Logger() { }
 
-    public Logger(int id, String tag, String msg, long timestamp) {
-        this.id = id;
+    public Logger(String tag, String msg) {
         this.tag = tag;
         this.msg = msg;
-        this.timestamp = timestamp;
+        this.timestamp = System.currentTimeMillis();
     }
 
     public int getId() {
