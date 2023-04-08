@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "LocalLogger"
 include ':app'
 include ':Logi'
+include ':logiui'

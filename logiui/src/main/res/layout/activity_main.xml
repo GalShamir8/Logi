@@ -5,18 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:padding="16dp">
-
             <TextView
                 android:text="@string/logi_ui"
                 android:textSize="20sp"
@@ -24,19 +23,16 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
-
             <ImageView
                 android:src="@drawable/logi_icon"
                 android:layout_width="50dp"
                 android:layout_height="30dp"/>
-
         </LinearLayout>
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/material_dynamic_neutral50"
+            android:background="@color/teal_700"
             android:padding="16dp">
 
             <TextView
@@ -45,6 +41,7 @@
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"/>
 
             <TextView
@@ -53,6 +50,7 @@
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"/>
 
             <SearchView
@@ -60,9 +58,6 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
-
         </LinearLayout>
     </LinearLayout>
-
-
 </RelativeLayout>
