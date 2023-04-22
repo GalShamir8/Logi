@@ -31,11 +31,6 @@ public class MainActivity extends AppCompatActivity {
         initViews();
         loggerHelper = LoggerHelper.getInstance();
         logsCollection = new ArrayList<>();
-        loggerHelper.insertAll(new Logger[] {
-                new Logger("test", "test1"),
-                new Logger("test", "test2"),
-                new Logger("test", "test3")
-        });
     }
 
     private void initViews() {
