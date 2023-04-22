@@ -17,7 +17,7 @@ public interface LoggerDao {
     @Query("SELECT * FROM logs WHERE id IN (:loggerIds)")
     List<Logger> loadAllByIds(int[] loggerIds);
 
-    @Query("SELECT * FROM logs WHERE tag LIKE :tag LIMIT 1")
+    @Query("SELECT * FROM logs WHERE tag =:tag")
     Logger findByTag(String tag);
 
     @Query("SELECT * FROM logs WHERE timestamp > :timestamp ")
@@ -34,5 +34,11 @@ public interface LoggerDao {
 
     @Delete
     void delete(Logger log);
+
+    @Query("DELETE FROM logs")
+    void deleteAll();
+
+    @Query("SELECT * FROM logs WHERE tag LIKE :tagPrefix")
+    List<Logger> findByTagStartsWith(String tagPrefix);
 }
 

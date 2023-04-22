@@ -8,6 +8,8 @@ import com.example.logi.models.Logger;
 import com.example.logi.db.AppDB;
 import com.example.logi.services.LoggerDao;
 
+import java.util.Locale;
+
 public class LoggerHelper {
 
     private final LoggerDao loggerDao;
@@ -42,6 +44,11 @@ public class LoggerHelper {
         new Thread(() -> callable.setData(loggerDao.findByTag(tag))).start();
     }
 
+    public void findByTagStartWith(String tagPrefix, Callable callable) {
+        String query = "%" + tagPrefix;
+        new Thread(() -> callable.setData(loggerDao.findByTagStartsWith(query))).start();
+    }
+
     public void findFromDate(long timestamp, Callable callable) {
         new Thread(() -> callable.setData(loggerDao.findFromDate(timestamp))).start();
     }
@@ -60,5 +67,9 @@ public class LoggerHelper {
 
     public void delete(Logger log) {
         new Thread(() -> loggerDao.delete(log)).start();
+    }
+
+    public void deleteAll(Callable callable) {
+        new Thread(() -> loggerDao.deleteAll()).start();
     }
 }
