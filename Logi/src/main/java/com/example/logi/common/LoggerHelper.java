@@ -8,8 +8,6 @@ import com.example.logi.models.Logger;
 import com.example.logi.db.AppDB;
 import com.example.logi.services.LoggerDao;
 
-import java.util.Locale;
-
 public class LoggerHelper {
 
     private final LoggerDao loggerDao;
@@ -19,10 +17,9 @@ public class LoggerHelper {
         return instance;
     }
 
-    public static LoggerHelper init(Context ctx){
+    public static void init(Context ctx){
         if (instance == null)
             instance = new LoggerHelper(ctx);
-        return instance;
     }
 
     private LoggerHelper(Context ctx) {
