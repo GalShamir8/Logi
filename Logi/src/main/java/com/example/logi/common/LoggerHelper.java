@@ -54,11 +54,11 @@ public class LoggerHelper {
         new Thread(() -> callable.setData(loggerDao.findBetweenDate(startTimeStamp, endTimeStamp))).start();
     }
 
-    public void insertAll(Logger... logs) {
+    public void addAll(Logger... logs) {
         new Thread(() -> loggerDao.insertAll(logs)).start();
     }
 
-    public void insert(Logger log) {
+    public void add(Logger log) {
         new Thread(() -> loggerDao.insert(log)).start();
     }
 
