@@ -1,4 +1,5 @@
-## Logi
+## Logi <img src=https://user-images.githubusercontent.com/64600215/234035353-7e23a6e6-f9a3-493f-928d-68e7fa37a563.png width=50 height=50>
+
 Logi is an android library that help you monitor and track your logs when the app is not running.
 Based on android roomSql library, Logi provides out of the box interface for all required actions!
 
