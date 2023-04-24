@@ -30,7 +30,7 @@ Ready to Go!
 #### Usage
 
 - After building the app and instance of LoggerHelper will be accesable in all of your project `LoggerHelper.getInstance();`
-Callable callback, used for set data return fron async request to fetch logs data.
+- Callable callback, used for set data return fron async request to fetch logs data.
 - Public methods:
   - `#add(Logger log)`
   - `#addAll(Logger... logs)`
