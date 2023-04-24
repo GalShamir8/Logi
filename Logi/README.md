@@ -18,7 +18,7 @@ pluginManagement {
 }
 ```
 
-**STEP 2 -> Add to your build.gradle file (.app):** (replce to specefic tag)
+**STEP 2 -> Add to your build.gradle file (.app):** (replce with specific tag)
 ```
 	dependencies {
           ...
